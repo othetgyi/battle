@@ -1,3 +1,11 @@
 <%= @player_1_name %> vs. <%= @player_2_name %>
 
-<%= @player_2_name %>: 60HP
+<p><%= @player_2_name %>: <%= @player_2_points%>HP</p>
+
+<form action="/attack" method="post">
+  <input type="submit" value="Attack player 2">
+</form>
+
+<% if @message %>
+  <p>Message: <%= @message %></p>
+<% end %>
